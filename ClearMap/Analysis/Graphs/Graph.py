@@ -290,7 +290,7 @@ class GeometricGraph(Graph):
 
   def edge_vectors(self, normalize = False):
     xyz = self.vertex_coordinates();
-    i,j = self.edge_connectiivty().T;
+    i,j = self.edge_connectivity().T;
     v = xyz[i] - xyz[j];
     if normalize:
       v = (v.T / np.linalg.norm(v, axis = 1)).T;
@@ -425,7 +425,7 @@ def save(filename, graph):
 
 def _test():
   import ClearMap.Analysis.Graphs.Graph as gr
-  reload(gr)
+   reload(gr)
   
   g = gr.Graph();
   print(g)

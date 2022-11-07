@@ -437,7 +437,10 @@ def initialize_view(view=None, title=None, fov=None, distance=None, elevation=No
     # build canvas
     canvas = vispy.scene.SceneCanvas(keys='interactive', title=title, show=True, bgcolor='white')
     
-    view = canvas.central_widget.add_view(camera = ttc.TurntableCamera())
+    ############## this is where it exploded!!!!!
+    camera = ttc.TurntableCamera();
+    view = canvas.central_widget.add_view()
+    ################
     view.camera = 'turntable'
     if fov is not None:
       view.camera.fov = fov
