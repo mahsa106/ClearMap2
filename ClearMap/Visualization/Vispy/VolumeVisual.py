@@ -35,7 +35,7 @@ coordinates).
 
 import numpy as np
 
-from vispy.visuals.volume import Texture3D, TextureEmulated3D, VertexBuffer, IndexBuffer
+from vispy.gloo import Texture3D, TextureEmulated3D, VertexBuffer, IndexBuffer
 from vispy.visuals.volume import Visual, Function, get_colormap
 
 #from ..gloo import Texture3D, TextureEmulated3D, VertexBuffer, IndexBuffer

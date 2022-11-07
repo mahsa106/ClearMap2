@@ -27,7 +27,7 @@ import functools as ft
 #from PyQt5.QtWidgets import *
 
 import pyqtgraph as pg
-pg.CONFIG_OPTIONS['useOpenGL'] = False  # set to False if trouble seeing data.
+pg.CONFIG_OPTIONS['useOpenGL'] = True  # set to False if trouble seeing data.
 
 if not pg.QAPP: 
   pg.mkQApp()
@@ -177,7 +177,12 @@ class DataViewer(pg.QtGui.QWidget):
     
     ### Gui Construction
     pg.QtGui.QWidget.__init__(self, parent, *args);
-    #print('gui')    
+    #print('gui')
+    
+    ### this is line 1
+    app = QApplication(sys.argv)
+    #print('gui')
+    
                          
     if title is None:
       if isinstance(source, str):
@@ -318,7 +323,8 @@ class DataViewer(pg.QtGui.QWidget):
       self.setMinMax(minMax);
      
     self.show();
-
+    ### this is line 2
+    sys.exit(app.exec_())
   
   def initializeSources(self, source, scale = None, axis = None, update = True):
     #initialize sources and axis settings  

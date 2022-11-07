@@ -63,7 +63,8 @@ test_data_path = os.path.join(test_path, 'Data');
 ### Paths to external programs and resources
 ###############################################################################
 
-elastix_path = os.path.join(external_path, 'elastix/build');
+#elastix_path = os.path.join(external_path, 'elastix/build');
+elastix_path = '/home/mahsa/Programs/ClearMap/elastix/elastix-5.0.1-linux';
 """Absolue path to the elastix installation
 
 Note
@@ -79,7 +80,7 @@ Note
   `TeraSticher Webpage <http://abria.github.io/TeraStitcher/>`_
 """
 
-imagej_path = None; # '/usr/local/Fiji.app';
+imagej_path = '/home/mahsa/Programs/Fiji'; # '/usr/local/Fiji.app';
 """Absolue path to the ImageJ/Fiji installation
 
 Note
@@ -87,7 +88,7 @@ Note
   `ImageJ/Fiji Webpage <https://fiji.sc/>`_
 """
 
-ilastik_path = None; #'/usr/local/ilastik/ilastik-1.2.0-Linux';
+ilastik_path = '/home/mahsa/Programs/ClearMap/ilastik/ilastik-1.4.0rc2-gpu-Linux'; #'/usr/local/ilastik/ilastik-1.2.0-Linux';
 """Absolute path to the Ilastik installation
 
 Note
